@@ -1,3 +1,3 @@
 ## worker java app
-[![Build Status](http://a2e3-41-250-157-40.ngrok.io/buildStatus/icon?job=instavote%2Fworker-build&subject=Build&color=blue)](http://a2e3-41-250-157-40.ngrok.io/job/instavote/job/worker-build/)
-[![Build Status](http://a2e3-41-250-157-40.ngrok.io/buildStatus/icon?job=instavote%2Fworker-test&subject=UniTest&color=pink)](http://a2e3-41-250-157-40.ngrok.io/job/instavote/job/worker-test/)
+[![Build Status](http://9011-41-143-245-225.ngrok.io/buildStatus/icon?job=instavote%2Fworker-build&subject=Build&color=blue)](http://9011-41-143-245-225.ngrok.io/job/instavote/job/worker-build/)
+[![Build Status](http://9011-41-143-245-225.ngrok.io/buildStatus/icon?job=instavote%2Fworker-test&subject=UniTest&color=pink)](http://9011-41-143-245-225.ngrok.io /job/instavote/job/worker-test/)
