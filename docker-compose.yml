@@ -1,0 +1,12 @@
+vote:
+  image: zinebh/vote:master
+  ports: 
+    - 5000:80
+
+result:
+  image: zinebh/result:master
+  ports:
+    - 5001:4000
+
+worker:
+  image: zinebh/worker:master
