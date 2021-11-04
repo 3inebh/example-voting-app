@@ -1,6 +1,6 @@
 vote:
   image: zinebh/vote:master
-  ports: 
+  ports:
     - 5000:80
 
 result:
