@@ -1,12 +1,28 @@
-vote:
-  image: zinebh/vote:master
-  ports:
-    - 5000:80
+version: "3.8"
 
-result:
-  image: zinebh/result:master
-  ports:
-    - 5001:4000
+volumes:
+  db-data:
 
-worker:
-  image: zinebh/worker:master
+networks:
+  instavote:
+    driver: bridge
+
+services: 
+  vote:
+    image: zinebh/vote:master
+    ports:
+      - 5000:80
+
+  redis:
+    image: redis:alpine
+
+  db:
+    image: postgres:9.4
+
+  result:
+    image: zinebh/result:master
+    ports:
+      - 5001:4000
+
+  worker:
+    image: zinebh/worker:master
