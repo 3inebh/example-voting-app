@@ -12,6 +12,8 @@ services:
     image: zinebh/vote:master
     ports:
       - 5000:80
+    links:
+      - redis:redis
 
   redis:
     image: redis:alpine
@@ -23,6 +25,11 @@ services:
     image: zinebh/result:master
     ports:
       - 5001:4000
+    links:
+      - db:db
 
   worker:
     image: zinebh/worker:master
+    links:
+      - redis:redis
+      - db:db
