@@ -10,6 +10,7 @@ networks:
 services: 
   vote:
     image: zinebh/vote:master
+    build: ./vote
     ports:
       - 5000:80
     depends_on:
@@ -33,6 +34,7 @@ services:
 
   result:
     image: zinebh/result:master
+    build: ./result
     ports:
       - 5001:4000
     depends_on:
@@ -42,6 +44,7 @@ services:
 
   worker:
     image: zinebh/worker:master
+    build: ./worker
     depends_on:
       - redis
       - db
