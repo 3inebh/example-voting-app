@@ -182,7 +182,7 @@ pipeline {
 
     stage('vote integration') {
       agent any
-      }
+      
       when {
         changeset '**/vote/**'
         branch 'master'
