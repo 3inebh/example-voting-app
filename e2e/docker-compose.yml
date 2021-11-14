@@ -3,7 +3,7 @@ version: '2'
 services:
 
   e2e:
-    build: ./tests/
+    build: ./tests
     depends_on:
       - vote
       - result
@@ -49,12 +49,18 @@ services:
 
   db:
     image: postgres:9.4
+    volumes:
+      - db-data:/var/lib/postgresql/data
     networks:
       - back-tier
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
 
 volumes:
   db-data:
 
 networks:
   front-tier:
+    driver: bridge
   back-tier:
+    driver: bridge
